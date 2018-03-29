@@ -967,11 +967,6 @@ tween(scale, 1.2);
 	changetourlanguage="changeLanguage_PdfViewer();"
 	/>
  <!-- ********** --> <!-- 360Images CoOL Hotspots Plugin --> <!-- CoOL Hotspots --> <!-- id : cool_hotspot --> <!-- ********** -->    <include url="%FIRSTXML%/graphics/coolhotspots.xml"/>      <style cooltype="rectangular" name="" type="container" width="100" height="50" bgalpha="0" bgcapture="true" accuracy="0" rectangular_width="100" rectangular_height="50" rectangular_width_onover="300" rectangular_height_onover="150" oy="-15" alwayson="false" ttalign="top" ttedge="bottom"  onover=" hidebbhs(); set(zorder,20); tween(width,get(rectangular_width_onover)); tween(height,get(rectangular_height_onover)); tween(layer[get(mybubble)].width,get(rectangular_width_onover)); tween(layer[get(mybubble)].height,get(rectangular_height_onover)); tween(layer[get(mypreview)].alpha,1); set(layer[get(mypreview)].enabled,true); "  onout=" set(zorder,2); tween(width,get(rectangular_width)); tween(height,get(rectangular_height)); tween(layer[get(mybubble)].width,get(rectangular_width)); tween(layer[get(mybubble)].height,get(rectangular_height)); ifnot(alwayson,tween(layer[get(mypreview)].alpha,0)); set(layer[get(mypreview)].enabled,false); "  ondown.touch="onover();"  onloaded=" txtadd(hotspot[get(name)].permanentTooltipForSpot, get(tooltip), '_permanent'); delayedcall(0.1, if(layer[get(permanentTooltipForSpot)].html, set(layer[get(permanentTooltipForSpot)].ox,0); set(layer[get(permanentTooltipForSpot)].oy,-10); ); );  txtadd(mybubble,'bubble',get(name)); addlayer(get(mybubble)); copy(hotspot[get(name)].mybubble,mybubble); layer[get(mybubble)].loadstyle(cool_hotspotrectangularlayer); txtadd(mypreview,'preview_',get(name)); addlayer(get(mypreview)); copy(hotspot[get(name)].mypreview,mypreview);   if(linkedscene, set(layer[get(mypreview)].url,get(scene[get(linkedscene)].thumburl)); ); if(linkedgroup, set(layer[get(mypreview)].url,get(panoramagroup[get(linkedgroup)].thumburl)); ); if(photourl, set(layer[get(mypreview)].url,get(photourl)); );  layer[get(mypreview)].loadstyle(cool_hotspotrectangular_previewlayer); txtadd(mypin,'pin',get(name)); addlayer(get(mypin)); layer[get(mypin)].loadstyle(cool_hotspotrectangular_pin); txtadd(parentlayer,'hotspot[',get(name),']'); copy(layer[get(mybubble)].parent,parentlayer); copy(layer[get(mypin)].parent,parentlayer); txtadd(parentlayer2,'layer[',get(mybubble),']'); copy(layer[get(mypreview)].parent,parentlayer2); txtadd(clickaction,'callwith(hotspot[',get(name),'],onclick)'); copy(layer[get(mypreview)].onclick,clickaction); " /> <style name="cool_hotspotrectangularlayer" type="container" width="100" height="50" bgalpha="0" bgborder="3 0xffffff 1" bgcapture="true" maskchildren="true" accuracy="1" ondown.touch="callwith(get(parent),onover);" align="center"  bgshadow="5 5 10 0 0x000000 0.5 inset"  /> <style name="cool_hotspotrectangular_previewlayer" align="center" width="300" accuracy="1" height="prop" alpha="0" enabled="false" onloaded="if(pixelheight LT 150,set(height,150);set(width,prop));" /> <style name="cool_hotspotrectangular_pin" url="graphics/360imageshotspots/pin.png" align="bottom" edge="top" width="20" height="15" />    
-  <!-- FLOORPLAN -->
-  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
-  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
-
-
   <action name="displayWebVideo">
     if(layer[webvideodisplay_bg],
 
@@ -1113,6 +1108,11 @@ tween(scale, 1.2);
     );
   </action>
   <events name="displayWebVideoObjectEvents" keep="true" onremovedisplayedobject="displayWebVideoObjectClose();"/>
+
+  <!-- FLOORPLAN -->
+  <action name="hideFloorplan">set(tour_displayfloorplan, false);events.dispatch(onhidetourfloorplan);</action>
+  <action name="showFloorplan">set(tour_displayfloorplan, true); events.dispatch(onshowtourfloorplan);</action>
+
 
   <!-- Tour Information -->
   <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
