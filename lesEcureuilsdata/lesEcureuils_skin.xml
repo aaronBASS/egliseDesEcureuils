@@ -544,7 +544,7 @@ tween(scale, 1.2);
          align="topleft" x="0" y="0"
          bg="false"
          bgborder="0"
-         alpha="1"
+         alpha="0"
          visible="false"
          capture="false" handcursor="false" enabled="false"
          interactivecontent="false" 

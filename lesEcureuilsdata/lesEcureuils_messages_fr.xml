@@ -5,8 +5,11 @@
 <!--         Messages         -->
 <!-- ************************ -->
 
-  <data name="fr_project_title"><![CDATA[Église des Ecureuils]]></data>
+  <data name="fr_project_title"><![CDATA[Église Saint-Jean-Baptiste (Les Écureuils)]]></data>
 
+
+
+  <data name="fr_pano30_title"><![CDATA[Mezannine]]></data>
 
   <data name="fr_panogroup33_title"><![CDATA[NEF]]></data>
 
@@ -19,9 +22,6 @@
 
 
   <data name="fr_pano28_title"><![CDATA[SAPRISTIE]]></data>
-
-
-  <data name="fr_pano30_title"><![CDATA[Mezannine]]></data>
 
 
   <data name="fr_pano652_title"><![CDATA[Exterieur]]></data>
