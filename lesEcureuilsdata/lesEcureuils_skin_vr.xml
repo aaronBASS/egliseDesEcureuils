@@ -34,38 +34,6 @@ tween(scale, 1.2);
 
 
     
-  <!-- Spot Style - point3d -->
-
-
-  <style name="Iconpoint3d"
-         url="%FIRSTXML%/spots/iconasset_2_user_defaultpoint8.png"
-         visible="false"
-         edge="center"
-         onhover="onhoverIconpoint3d"
-         onover="onoverIconpoint3d"
-         onout="onoutIconpoint3d"
-
-         height="40"
-         width="40"
-         />
-  <action name="onhoverIconpoint3d">
-    showtooltip('hotspot');
-  </action>
-  <action name="onoverIconpoint3d">
-tween(scale, 1.2);
-
-
-  </action>
-  <action name="onoutIconpoint3d">
-    hideTooltip();
-    tween(scale, 1);
-
-
-  </action>
-
-
-
-    
   <!-- Spot Style - arrowFlatLeft 1 -->
 
 
@@ -249,38 +217,6 @@ tween(scale, 1.2);
 
   </action>
   <action name="onoutIconarrowOrthoUpMED">
-    hideTooltip();
-    tween(scale, 1);
-
-
-  </action>
-
-
-
-    
-  <!-- Spot Style - Video -->
-
-
-  <style name="IconVideo"
-         url="%FIRSTXML%/spots/asset_25_user_defaultpoint18.png"
-         visible="false"
-         edge="center"
-         onhover="onhoverIconVideo"
-         onover="onoverIconVideo"
-         onout="onoutIconVideo"
-
-         height="40"
-         width="40"
-         />
-  <action name="onhoverIconVideo">
-    showtooltip('hotspot');
-  </action>
-  <action name="onoverIconVideo">
-tween(scale, 1.2);
-
-
-  </action>
-  <action name="onoutIconVideo">
     hideTooltip();
     tween(scale, 1);
 
